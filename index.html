@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jyoti Kumari · Software Engineer</title>
+  <meta name="description" content="Jyoti Kumari — Software Engineer (Backend / Full-Stack). NIT Jalandhar '26 · 500+ LeetCode · 1800+ rating. Open to work." />
+
+  <!-- Link preview when shared on LinkedIn / WhatsApp / X -->
+  <meta property="og:title" content="Jyoti Kumari · Software Engineer" />
+  <meta property="og:description" content="Backend / Full-Stack SWE · NIT Jalandhar '26 · 500+ LeetCode (1800+) · Open to work" />
+  <meta property="og:image" content="https://github.com/JyotiKM29.png" />
+  <meta property="og:type" content="profile" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>JK</text></svg>" />
+
+  <style>
+    :root {
+      --bg: #0b0d14;
+      --card: rgba(255, 255, 255, 0.04);
+      --card-hover: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #eef0f6;
+      --muted: #9aa1b5;
+      --accent: #818cf8;
+      --accent-2: #22d3ee;
+      --green: #34d399;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 56px 20px 40px;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* soft background glow */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      filter: blur(110px);
+      opacity: 0.22;
+      z-index: -1;
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+    body::before { background: var(--accent); top: -160px; left: -140px; }
+    body::after  { background: var(--accent-2); bottom: -180px; right: -160px; animation-delay: -9s; }
+
+    @keyframes drift {
+      to { transform: translate(60px, 40px) scale(1.1); }
+    }
+
+    main {
+      width: 100%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* ---------- Header ---------- */
+    .avatar-wrap {
+      position: relative;
+      width: 112px; height: 112px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      margin-bottom: 18px;
+    }
+    .avatar, .avatar-fallback {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #1a1d29;
+      border: 3px solid var(--bg);
+    }
+    .avatar-fallback {
+      display: none;
+      align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 700; color: var(--text);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      margin-top: 6px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .open-badge {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      70%  { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    }
+
+    /* ---------- Stats ---------- */
+    .stats {
+      margin-top: 26px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 8px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .stat span {
+      display: block;
+      margin-top: 2px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ---------- Links ---------- */
+    .links {
+      margin-top: 26px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 18px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      text-align: left;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+    .link:hover, .link:focus-visible {
+      transform: translateY(-2px);
+      background: var(--card-hover);
+      border-color: rgba(129, 140, 248, 0.5);
+      outline: none;
+    }
+    .icon {
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+    }
+    .icon svg { width: 22px; height: 22px; }
+    .link-text { flex: 1; min-width: 0; }
+    .link-text strong { display: block; font-size: 15px; font-weight: 600; }
+    .link-text span {
+      display: block; margin-top: 2px;
+      font-size: 13px; color: var(--muted);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .arrow { color: var(--muted); transition: transform 0.18s ease, color 0.18s ease; }
+    .link:hover .arrow { transform: translateX(3px); color: var(--text); }
+
+    .i-linkedin { background: rgba(10, 102, 194, 0.18); color: #4a9fe8; }
+    .i-github   { background: rgba(255, 255, 255, 0.08); color: #f0f0f0; }
+    .i-leetcode { background: rgba(255, 161, 22, 0.15); color: #ffa116; }
+    .i-web      { background: rgba(129, 140, 248, 0.15); color: var(--accent); }
+    .i-mail     { background: rgba(34, 211, 238, 0.13); color: var(--accent-2); }
+    .i-resume   { background: rgba(52, 211, 153, 0.13); color: var(--green); }
+
+    /* ---------- Tech stack ---------- */
+    .stack {
+      margin-top: 30px;
+      width: 100%;
+      text-align: left;
+    }
+    .stack { margin-top: 34px; }
+    .stack h2 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .stack-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 10px 0;
+      border-top: 1px solid var(--border);
+    }
+    .stack-row:last-child { border-bottom: 1px solid var(--border); }
+    .stack-label {
+      width: 84px;
+      flex-shrink: 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    /* ---------- Journey timeline ---------- */
+    .journey {
+      margin-top: 34px;
+      width: 100%;
+      text-align: left;
+    }
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px; top: 6px; bottom: 6px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent-2), var(--green));
+      opacity: 0.45;
+      border-radius: 2px;
+    }
+    .t-item {
+      position: relative;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .t-item:last-child { margin-bottom: 0; }
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: -27px; top: 19px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+    }
+    .t-item.edu::before  { border-color: var(--accent-2); }
+    .t-item.now::before  { background: var(--green); border-color: var(--green); box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.18); }
+
+    .t-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .t-head strong { font-size: 15px; font-weight: 600; }
+    .t-date { font-size: 12px; color: var(--muted); white-space: nowrap; }
+    .t-role {
+      margin-top: 3px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .t-item.edu .t-role { color: var(--accent-2); }
+    .t-item.now .t-role { color: var(--green); }
+    .t-desc {
+      margin-top: 6px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .t-desc a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 420px) {
+      body { padding-top: 40px; }
+      h1 { font-size: 24px; }
+      .stat strong { font-size: 18px; }
+      .stack-label { width: 70px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- ===== Header ===== -->
+    <div class="avatar-wrap">
+      <img class="avatar" src="https://github.com/JyotiKM29.png" alt="Jyoti Kumari"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="avatar-fallback">JK</div>
+    </div>
+
+    <h1>Jyoti Kumari</h1>
+    <p class="role">Software Engineer · Backend / Full-Stack</p>
+
+    <div class="open-badge"><span class="dot"></span> Open to Work</div>
+
+    <!-- ===== Stats ===== -->
+    <section class="stats" aria-label="Highlights">
+      <div class="stat"><strong>NIT '26</strong><span>Jalandhar</span></div>
+      <div class="stat"><strong>500+</strong><span>LeetCode solved</span></div>
+      <div class="stat"><strong>1800+</strong><span>Contest rating</span></div>
+    </section>
+
+    <!-- ===== Links ===== -->
+    <nav class="links" aria-label="Profiles">
+      <a class="link" href="https://www.linkedin.com/in/jyoti-km/" target="_blank" rel="noopener">
+        <div class="icon i-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <rect x="6.5" y="10" width="2.6" height="7.5" rx="0.6"/>
+            <circle cx="7.8" cy="7.2" r="1.5"/>
+            <path d="M11.2 10h2.5v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.2 3 3.5v4.2h-2.6v-3.8c0-1.1-.4-1.7-1.3-1.7-1 0-1.6.7-1.6 1.8v3.7h-2.6z"/>
+          </svg>
+        </div>
+        <div class="link-text"><strong>LinkedIn</strong><span>linkedin.com/in/jyoti-km</span></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link" href="https://github.com/JyotiKM29" target="_blank" rel="noopener">
+        <div class="icon i-github">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </div>
+        <div class="link-text"><strong>GitHub</strong><span>github.com/JyotiKM29</span></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link" href="https://leetcode.com/u/JyotiKM2911/" target="_blank" rel="noopener">
+        <div class="icon i-leetcode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="8 6 2 12 8 18"/>
+            <polyline points="16 6 22 12 16 18"/>
+            <line x1="14" y1="4" x2="10" y2="20"/>
+          </svg>
+        </div>
+        <div class="link-text"><strong>LeetCode</strong><span>500+ solved · 1800+ rating</span></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <!-- ===== Uncomment & fill these when ready ===== -->
+
+      <!--
+      <a class="link" href="https://YOUR-PORTFOLIO-URL" target="_blank" rel="noopener">
+        <div class="icon i-web">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/>
+          </svg>
+        </div>
+        <div class="link-text"><strong>Portfolio</strong><span>Projects & case studies</span></div>
+        <span class="arrow">→</span>
+      </a>
+      -->
+
+      <!--
+      <a class="link" href="resume.pdf" target="_blank" rel="noopener">
+        <div class="icon i-resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/>
+          </svg>
+        </div>
+        <div class="link-text"><strong>Resume</strong><span>Download PDF</span></div>
+        <span class="arrow">→</span>
+      </a>
+      -->
+
+      <!--
+      <a class="link" href="mailto:YOUR-EMAIL@gmail.com">
+        <div class="icon i-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/>
+          </svg>
+        </div>
+        <div class="link-text"><strong>Email</strong><span>YOUR-EMAIL@gmail.com</span></div>
+        <span class="arrow">→</span>
+      </a>
+      -->
+    </nav>
+
+    <!-- ===== Journey (oldest → newest) ===== -->
+    <section class="journey" aria-label="Journey">
+      <h2 class="section-title">Journey</h2>
+      <ol class="timeline">
+
+        <li class="t-item edu">
+          <div class="t-head"><strong>IKG Punjab Technical University</strong><span class="t-date">2019 – 2023</span></div>
+          <div class="t-role">B.Tech · Computer Science &amp; Engineering</div>
+        </li>
+
+        <li class="t-item">
+          <div class="t-head"><strong>Chaabi (WorkRight)</strong><span class="t-date">2023 – 2024</span></div>
+          <div class="t-role">Frontend Engineer</div>
+          <p class="t-desc">Built a shared library of 25+ reusable components, cutting new-feature setup from 8 hours to under 2.</p>
+        </li>
+
+        <li class="t-item">
+          <div class="t-head"><strong>Outsized</strong><span class="t-date">2023 – Dec 2024</span></div>
+          <div class="t-role">Software Engineer</div>
+          <p class="t-desc">Next.js dashboards and Python REST APIs; cut p95 response time by 25% on pages serving 10K+ daily users.</p>
+        </li>
+
+        <li class="t-item edu">
+          <div class="t-head"><strong>NIT Jalandhar</strong><span class="t-date">2024 – 2026</span></div>
+          <div class="t-role">M.Tech · Information Security</div>
+          <p class="t-desc">Thesis on security-aware scheduling for mixed-criticality systems.</p>
+        </li>
+
+        <li class="t-item">
+          <div class="t-head"><strong>Cubicuss</strong><span class="t-date">Jan 2026 – 2026</span></div>
+          <div class="t-role">Full-Stack Software Engineer</div>
+          <p class="t-desc">Backend and infra work across Java / Spring Boot services, Kafka and AWS.</p>
+        </li>
+
+        <li class="t-item now">
+          <div class="t-head"><strong>What's next?</strong><span class="t-date">Now</span></div>
+          <div class="t-role">Open to SWE roles · Backend / Full-Stack</div>
+          <p class="t-desc">Immediate joiner. Let's talk on <a href="https://www.linkedin.com/in/jyoti-km/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ===== Tech stack ===== -->
+    <section class="stack" aria-label="Tech stack">
+      <h2>Tech Stack</h2>
+      <div class="stack-row">
+        <div class="stack-label">Backend</div>
+        <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span></div><span class="chip">Node.js</span></div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-label">Frontend</div>
+        <div class="chips"><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">CSS</span></div>
+      </div>
+      <div class="stack-row">
+        <div class="stack-label">Infra</div>
+        <div class="chips"><span class="chip">AWS</span><span class="chip">Kafka</span><span class="chip">Redis</span></div>
+      </div>
+    </section>
+
+    <footer>© 2026 Jyoti Kumari</footer>
+  </main>
+</body>
+</html>
